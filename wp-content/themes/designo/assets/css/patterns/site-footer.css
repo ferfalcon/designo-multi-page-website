@@ -3,7 +3,7 @@
   margin-inline: auto;
   color: color-mix(in srgb, var(--wp--preset--color--white) 50%, transparent);
   max-width: var(--wp--style--global--wide-size);
-  padding-block: 4rem;
+  padding-block: 2.8125rem;
   text-align: center;
 }
 
@@ -68,6 +68,11 @@
   margin-block-start: 2.5rem;
 }
 
+.designo-footer-bottom > :where(.designo-footer-office, .designo-footer-contact, .designo-footer-socials),
+.designo-footer-bottom > :where(.designo-footer-office, .designo-footer-contact) > :where(*) {
+  max-width: none;
+}
+
 .designo-footer-bottom :where(p) {
   line-height: 1.625;
 }
@@ -81,9 +86,14 @@
 }
 
 .designo-footer-socials {
+  display: flex;
   gap: 1rem;
+  align-items: center;
+  color: var(--wp--preset--color--peach);
   justify-content: center;
   justify-self: center;
+  line-height: 0;
+  padding: 0;
 }
 
 .designo-footer-contact,
@@ -92,15 +102,21 @@
 }
 
 .designo-footer-socials :where(.wp-social-link) {
+  background-color: transparent;
+  color: inherit;
+  display: inline-flex;
   inline-size: 1.5rem;
   block-size: 1.5rem;
 }
 
 .designo-footer-socials :where(.wp-social-link a) {
+  color: inherit;
+  display: inline-flex;
   padding: 0;
 }
 
 .designo-footer-socials :where(svg) {
+  fill: currentColor;
   inline-size: 1.5rem;
   block-size: 1.5rem;
 }
@@ -108,7 +124,7 @@
 @media (min-width: 48rem) {
   .designo-site-footer {
     inline-size: min(100% - 78px, var(--wp--style--global--content-size));
-    padding-block: 5rem;
+    padding-block: 4rem;
     text-align: left;
   }
 
@@ -161,11 +177,26 @@
 @media (min-width: 68.751rem) {
   .designo-site-footer {
     inline-size: min(100% - 48px, var(--wp--style--global--wide-size));
-    padding-block: 4.5rem;
+    padding-block: 3.75rem 3.6875rem;
+  }
+
+  .designo-footer-top {
+    row-gap: 2.375rem;
   }
 
   .designo-footer-bottom {
-    grid-template-columns: 350px 350px minmax(184px, 1fr);
-    column-gap: 30px;
+    grid-template-columns: 350px 350px 184px;
+    column-gap: 113px;
+    margin-block-start: 2.5625rem;
+  }
+
+  .designo-footer-bottom > :where(.designo-footer-office, .designo-footer-contact),
+  .designo-footer-bottom > :where(.designo-footer-office, .designo-footer-contact) > :where(*) {
+    inline-size: 100%;
+    margin-inline: 0;
+  }
+
+  .designo-footer-socials {
+    justify-self: start;
   }
 }
