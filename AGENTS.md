@@ -10,6 +10,9 @@ Reference material is kept separate from WordPress runtime code:
 - `design/` contains desktop, tablet, and mobile screenshots.
 - `wp-content/themes/designo/` is the custom project block theme. Keep theme work scoped there.
 - `wp-content/themes/designo/assets/` contains the copied starter assets used by the theme.
+- `wp-content/themes/designo/style.css` is reserved for the required WordPress theme metadata header only.
+- `wp-content/themes/designo/assets/css/theme.css` contains global custom theme CSS used by the frontend and editor.
+- `wp-content/themes/designo/assets/css/patterns/` contains pattern-specific CSS, for example the site footer pattern stylesheet.
 - `wp-content/themes/designo/templates/`, `parts/`, and `patterns/` contain block theme templates, template parts, and filesystem block patterns.
 - Other directories in `wp-content/themes/` are bundled WordPress themes; do not edit them for project work.
 - `wp-content/plugins/` is for plugin code only; avoid editing bundled plugins unless required.
@@ -36,6 +39,10 @@ There is no project-level npm, Composer, or PHPUnit setup. Do not add build tool
 Follow WordPress conventions for PHP, templates, and block themes. Use 4 spaces for PHP and 2 spaces for HTML, CSS, and JSON where practical. Prefer lowercase, hyphenated names for theme files, pattern slugs, handles, and CSS classes, for example `designo-card`.
 
 Keep custom code scoped to the custom theme. Do not modify WordPress core, default themes, or generated DDEV files for feature work.
+
+Keep `wp-content/themes/designo/style.css` metadata-only. Put global authored CSS in `wp-content/themes/designo/assets/css/theme.css`, put pattern-specific authored CSS in `wp-content/themes/designo/assets/css/patterns/`, and enqueue those files from the theme.
+
+Do not use `max-width` declarations inside `@media` rules. Prefer existing layout tokens with `inline-size`, grid/flex track changes, or non-media defaults when constraining responsive layouts.
 
 For theme-owned reusable content, prefer filesystem patterns in `wp-content/themes/designo/patterns/`. Use WordPress Pages for page body content; do not seed or mutate local database content unless specifically requested.
 

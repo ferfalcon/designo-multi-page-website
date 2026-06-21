@@ -1,0 +1,112 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-inline-size: 320px;
+}
+
+a {
+  text-underline-offset: 0.18em;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+:where(.wp-site-blocks *:focus-visible) {
+  outline: 2px solid var(--wp--preset--color--peach);
+  outline-offset: 4px;
+}
+
+.designo-site-header,
+.designo-section {
+  inline-size: min(100% - 48px, var(--wp--style--global--wide-size));
+  margin-inline: auto;
+}
+
+.designo-site-header {
+  padding-block: clamp(2rem, 5vw, 4rem);
+}
+
+.designo-site-header .wp-block-navigation__responsive-container-open {
+  color: var(--wp--preset--color--dark-grey);
+}
+
+.designo-hero {
+  position: relative;
+  overflow: clip;
+  border-radius: 0;
+  margin-inline: -24px;
+}
+
+.designo-cta,
+.designo-design-card {
+  border-radius: 15px;
+}
+
+.designo-page-hero {
+  border-radius: 0;
+  margin-inline: -24px;
+}
+
+.designo-design-card {
+  position: relative;
+  overflow: clip;
+}
+
+.designo-design-card :where(img) {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  filter: brightness(0.45);
+  transition: filter 180ms ease;
+}
+
+.designo-design-card :where(a:hover img, a:focus-visible img) {
+  filter: brightness(0.6) sepia(0.25) saturate(1.5) hue-rotate(320deg);
+}
+
+.designo-project-card {
+  overflow: clip;
+  border-radius: 15px;
+  background: var(--wp--preset--color--light-peach);
+}
+
+.designo-project-card :where(img) {
+  inline-size: 100%;
+}
+
+.designo-location-card :where(p) {
+  font-style: normal;
+}
+
+.designo-contact-form :where(input, textarea) {
+  inline-size: 100%;
+  border: 0;
+  border-block-end: 1px solid currentColor;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  padding: 0.75rem 0;
+  font: inherit;
+}
+
+.designo-contact-form :where(input::placeholder, textarea::placeholder) {
+  color: color-mix(in srgb, currentColor 65%, transparent);
+}
+
+.designo-contact-form :where(input:focus, textarea:focus) {
+  outline: 0;
+  border-block-end-width: 3px;
+}
+
+@media (min-width: 48rem) {
+  .designo-page-hero,
+  .designo-hero {
+    border-radius: 15px;
+    margin-inline: auto;
+  }
+
+}
