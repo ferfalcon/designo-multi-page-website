@@ -1,0 +1,51 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<main>
+    <section>
+      <h1>Contact us</h1>
+      <p>Ready to take it to the next level? Let’s talk about your project or idea and find out how we can help your business grow. If you are looking for unique digital experiences that’s relatable to your users, drop us a line.</p>
+    </section>
+    <form action="">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required />
+      </div>
+      <div>
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email" required />
+      </div>
+      <div>
+        <label for="phone">Phone</label>
+        <input type="number" name="phone" id="phone" required />
+      </div>
+      <div>
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" cols="33">
+        </textarea>
+      </div>
+      <button>Submit</button>
+    </form>
+    <section>
+      <ul>
+        <li>
+          <h3>Canada</h3>
+          <img src="./assets/shared/desktop/illustration-canada.svg" alt="" />
+          <a href="#">See location</a>
+        </li>
+        <li>
+          <h3>Australia</h3>
+          <img src="./assets/shared/desktop/illustration-australia.svg" alt="" />
+          <a href="#">See location</a>
+        </li>
+        <li>
+          <h3>United Kingdom</h3>
+          <img src="./assets/shared/desktop/illustration-united-kingdom.svg" alt="" />
+          <a href="#">See location</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+</Layout>

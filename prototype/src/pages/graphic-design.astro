@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+	<main>
+    <section>
+      <h1>Graphic design</h1>
+      <p>We deliver eye-catching branding materials that are tailored to meet your business objectives.</p>
+    </section>
+    <ul>
+      <li>
+        <a href="#">
+          <h2>Tim Brown</h2>
+          <p>A book cover designed for Tim Brown’s new release, ‘Change’</p>
+          <img src="./assets/graphic-design/desktop/image-change.jpg" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <h2>Boxed water</h2>
+          <p>A simple packaging concept made for Boxed Water</p>
+          <img src="./assets/graphic-design/desktop/image-boxed-water.jpg" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <h2>Science!</h2>
+          <p>A poster made in collaboration with the Federal Art Project</p>
+          <img src="./assets/graphic-design/desktop/image-science.jpg" alt="" />
+        </a>
+      </li>
+    </ul>
+    <section>
+      <section>
+        <a href="./app-design.html">
+          <h2>App Design</h2>
+          <p>View Projects</p>
+          <picture>
+            <source media="(min-width: 64rem)" srcset="./assets/home/desktop/image-app-design.jpg" />
+            <source media="(min-width: 48rem)" srcset="./assets/home/tablet/image-app-design.jpg" />
+            <img src="./assets/home/mobile/image-app-design.jpg" alt="" />
+          </picture>
+        </a>
+      </section>
+      <section>
+        <a href="./web-design.html">
+          <h2>Web Design</h2>
+          <p>View Projects</p>
+          <picture>
+            <source media="(min-width: 64rem)" srcset="./assets/home/desktop/image-web-design-small.jpg" />
+            <source media="(min-width: 48rem)" srcset="./assets/home/tablet/image-web-design.jpg" />
+            <img src="./assets/home/mobile/image-web-design.jpg" alt="" />
+          </picture>
+        </a>
+      </section>
+    </section>
+    <section>
+      <h2>Let’s talk about your project</h2>
+      <p>
+        Ready to take it to the next level? Contact us today and find out how
+        our expertise can help your business grow.
+      </p>
+      <a href="./contact.html">Get in touch</a>
+    </section>
+  </main>
+</Layout>
