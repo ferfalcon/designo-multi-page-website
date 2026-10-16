@@ -50,6 +50,12 @@ Before launch, review **Contact → Contact Forms → Designo contact**:
 - Review field labels, required fields, confirmation/error messages, and any privacy/consent copy with the site owner. Keep visible labels and autocomplete hints.
 - Configure permissions if Editors need to change form definitions; do not increase roles automatically.
 
+## Service card interactions (1.0.3)
+
+Service cards on Home and service pages have a peach highlight on hover (where supported) and keyboard focus, with dark high-contrast links, explicit focus outlines, and at least 44px-tall link targets. Touch devices do not require hovering to reveal links. The effect is CSS-only, adds no motion, and leaves existing page content, destinations, and native Cover settings unchanged at rest. Colors use the editable theme palette. Changing palette colors requires rechecking contrast.
+
+Run `bash web/wp-content/themes/designo/tests/service-cards.sh [homepage-url]` with `agent-browser` and its browser installed. It defaults to the local DDEV homepage and checks hover/focus contrast, keyboard focus indicators, target height, state reset, and overflow at 375/768/1440px against the actual rendered page. This is a separate browser test, not part of the static-only GitHub Action.
+
 ## Google Maps
 
 Introduced in version 1.0.1 and changed to automatic display in **1.0.2**, per the requested mockup. No additional plugin or API key is used. The Google Map block is available to standard Editors through the block inserter; it does not require Custom HTML or unfiltered HTML privileges.
