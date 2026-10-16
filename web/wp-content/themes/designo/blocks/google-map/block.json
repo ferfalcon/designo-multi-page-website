@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "designo/google-map",
+  "version": "1.1.0",
+  "title": "Google Map",
+  "category": "widgets",
+  "icon": "location-alt",
+  "description": "An editor-managed office map that appears automatically, without a load button.",
+  "textdomain": "designo",
+  "attributes": {
+    "placeLabel": { "type": "string", "default": "Office location" },
+    "address": { "type": "string", "default": "" },
+    "embedUrl": { "type": "string", "default": "" },
+    "directionsLabel": { "type": "string", "default": "Open in Google Maps" }
+  },
+  "supports": { "html": false },
+  "editorScript": "designo-map-editor"
+}
