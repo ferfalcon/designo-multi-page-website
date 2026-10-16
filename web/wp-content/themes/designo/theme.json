@@ -1,0 +1,225 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "useRootPaddingAwareAlignments": true,
+    "layout": {
+      "contentSize": "1110px",
+      "wideSize": "1280px"
+    },
+    "color": {
+      "palette": [
+        {
+          "slug": "peach",
+          "name": "Peach",
+          "color": "#e7816b"
+        },
+        {
+          "slug": "peach-light",
+          "name": "Light peach",
+          "color": "#ffad9b"
+        },
+        {
+          "slug": "ink",
+          "name": "Ink",
+          "color": "#1d1c1e"
+        },
+        {
+          "slug": "body",
+          "name": "Body",
+          "color": "#333136"
+        },
+        {
+          "slug": "cream",
+          "name": "Cream",
+          "color": "#fdf3f0"
+        },
+        {
+          "slug": "white",
+          "name": "White",
+          "color": "#ffffff"
+        },
+        {
+          "slug": "accent",
+          "name": "Accessible peach",
+          "color": "#a54130"
+        }
+      ]
+    },
+    "typography": {
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "fontFamily": "Jost, sans-serif",
+          "slug": "jost",
+          "name": "Jost",
+          "fontFace": [
+            {
+              "fontFamily": "Jost",
+              "fontStyle": "normal",
+              "fontWeight": "100 900",
+              "src": [
+                "file:./assets/fonts/jost-latin.ttf"
+              ]
+            }
+          ]
+        }
+      ],
+      "fontSizes": [
+        {
+          "slug": "small",
+          "name": "Small",
+          "size": "0.875rem"
+        },
+        {
+          "slug": "medium",
+          "name": "Body",
+          "size": "1rem"
+        },
+        {
+          "slug": "large",
+          "name": "Large",
+          "size": "1.25rem"
+        },
+        {
+          "slug": "x-large",
+          "name": "Heading",
+          "size": "2.5rem"
+        },
+        {
+          "slug": "xx-large",
+          "name": "Display",
+          "size": "3rem"
+        }
+      ]
+    },
+    "spacing": {
+      "units": [
+        "px",
+        "rem",
+        "em",
+        "%",
+        "vw"
+      ],
+      "spacingSizes": [
+        {
+          "slug": "small",
+          "name": "Small",
+          "size": "1.5rem"
+        },
+        {
+          "slug": "medium",
+          "name": "Medium",
+          "size": "2rem"
+        },
+        {
+          "slug": "large",
+          "name": "Large",
+          "size": "4rem"
+        },
+        {
+          "slug": "section",
+          "name": "Section",
+          "size": "clamp(5rem, 10vw, 10rem)"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|white",
+      "text": "var:preset|color|body"
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|jost",
+      "fontSize": "1rem",
+      "lineHeight": "1.625"
+    },
+    "spacing": {
+      "blockGap": "1.5rem",
+      "padding": {
+        "left": "24px",
+        "right": "24px"
+      }
+    },
+    "elements": {
+      "heading": {
+        "typography": {
+          "fontWeight": "500",
+          "lineHeight": "1.1"
+        }
+      },
+      "h1": {
+        "typography": {
+          "fontSize": "var:preset|font-size|xx-large"
+        }
+      },
+      "h2": {
+        "typography": {
+          "fontSize": "var:preset|font-size|x-large"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "inherit"
+        }
+      },
+      "button": {
+        "border": {
+          "radius": "8px"
+        },
+        "color": {
+          "background": "var:preset|color|peach",
+          "text": "var:preset|color|ink"
+        },
+        "typography": {
+          "fontSize": "0.9375rem",
+          "fontWeight": "500",
+          "letterSpacing": "1px"
+        },
+        "spacing": {
+          "padding": {
+            "top": "16px",
+            "bottom": "16px",
+            "left": "24px",
+            "right": "24px"
+          }
+        }
+      }
+    }
+  },
+  "customTemplates": [
+    {
+      "name": "page-landing",
+      "title": "Designo landing page (heading in content)",
+      "postTypes": [
+        "page"
+      ]
+    },
+    {
+      "name": "page-contact",
+      "title": "Designo contact (no project CTA)",
+      "postTypes": [
+        "page"
+      ]
+    }
+  ],
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Header",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "area": "footer"
+    },
+    {
+      "name": "call-to-action",
+      "title": "Project call to action",
+      "area": "uncategorized"
+    }
+  ]
+}

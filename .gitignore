@@ -41,6 +41,24 @@ wp-config.php
 # uncomment the next line
 #/wp-content/plugins
 
+# Local DDEV configuration, private operational notes, and database exports.
+/.ddev/
+/docs/development-tools.local.md
+.env
+.env.*
+!.env.example
+*.sql
+*.sql.gz
+/backups/
+
+# WordPress lives under web/. Track only the custom theme, never the local install.
+/web/*
+!/web/wp-content/
+/web/wp-content/*
+!/web/wp-content/themes/
+/web/wp-content/themes/*
+!/web/wp-content/themes/designo/
+
 # All themes
 #
 # Note: If you wish to whitelist themes,
