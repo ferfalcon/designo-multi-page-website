@@ -21,6 +21,8 @@ jobs:
         run: find web/wp-content/themes/designo -name '*.php' -print0 | xargs -0 -r -n 1 php -l
       - name: Check JavaScript syntax
         run: find web/wp-content/themes/designo -name '*.js' -print0 | xargs -0 -r -n 1 node --check
+      - name: Check browser-test shell syntax
+        run: find web/wp-content/themes/designo/tests -name '*.sh' -print0 | xargs -0 -r -n 1 bash -n
       - name: Validate JSON
         run: |
           python3 - <<'PY'

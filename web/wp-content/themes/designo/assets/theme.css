@@ -37,9 +37,18 @@
 .service-card { border-radius: var(--designo-radius); min-block-size: 308px; text-align: center; overflow: clip; }
 .service-card h2 { text-transform: uppercase; letter-spacing: 2px; }
 .service-card p { text-transform: uppercase; letter-spacing: 5px; font-size: .9375rem; }
-.service-card a { color: white; text-decoration: none; }
-.service-card a:hover { text-decoration: underline; text-underline-offset: 5px; }
-.service-card p span { color: var(--wp--preset--color--peach-light); }
+/* Decorative highlight leaves native Cover settings and editable links intact. */
+.service-card::after { content: ""; position: absolute; inset: 0; z-index: 1; background: var(--wp--preset--color--peach); opacity: var(--designo-service-active,0); pointer-events: none; }
+/* Override WordPress's high-specificity Cover stacking rule, not editor colors. */
+.service-card .wp-block-cover__inner-container { position: relative; z-index: 2 !important; }
+.service-card a { display: inline-flex; align-items: center; gap: .5rem; min-block-size: 44px; max-inline-size: 100%; box-sizing: border-box; padding-inline: .25rem; color: var(--designo-service-foreground,white); text-decoration: none; }
+.service-card a:is(:hover,:focus-visible) { text-decoration: underline; text-underline-offset: 5px; }
+.service-card a:focus-visible { outline: 3px solid currentColor; outline-offset: 5px; }
+.service-card p span { color: var(--designo-service-foreground,var(--wp--preset--color--peach-light)); }
+.service-card:focus-within { --designo-service-active: 1; --designo-service-foreground: var(--wp--preset--color--ink); }
+@media (hover: hover) {
+ .service-card:hover { --designo-service-active: 1; --designo-service-foreground: var(--wp--preset--color--ink); }
+}
 .service-grid-home { grid-template-columns: repeat(2,minmax(0,1fr)); }
 .service-grid-home > :first-child { grid-row: span 2; }
 .values-grid, .location-links, .project-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%, 18rem),1fr)); gap: 2rem; }

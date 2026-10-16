@@ -37,7 +37,7 @@ DDEV captures local email in Mailpit; local mail success does not prove producti
 1. Fetch the latest `main`, create a feature branch, and implement/test locally.
 2. Review `git diff`, stage only intended source files, and commit with a descriptive message.
 3. Push the feature branch and open a pull request against `main`.
-4. GitHub Actions checks PHP syntax, JavaScript syntax, and JSON files. It does **not** test a full WordPress runtime or deploy anything.
+4. GitHub Actions checks PHP syntax, JavaScript syntax, browser-test shell syntax, and JSON files. It does **not** test a full WordPress runtime or deploy anything.
 5. Review and merge the PR before deploying future changes. Do not treat a green syntax check as end-to-end approval.
 6. Deploy the reviewed revision deliberately, verify the live site, and record the deployed commit privately.
 
